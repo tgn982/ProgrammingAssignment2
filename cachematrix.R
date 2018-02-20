@@ -1,7 +1,16 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
+## This is an example using "CACHING" method
+## if the function already know the answer 
+## we can use previous data.
+
+
+## makeCacheMatrix make matrix of cache data.
+## 1.set the value of the matrix
+## 2.get the value of the matrix
+## 3.set the value of the inverse matrix
+## 4.get the value of the inverse matrix
+
+ 
 
 makeCacheMatrix <- function(x = matrix()) {
         i <- NULL
@@ -10,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 i <<- NULL
         }
         get <- function() x
-        setinverse <- function(mean) i <<- solve
+        setinverse <- function(solve) i <<- solve
         getinverse <- function() i
         list(set = set, get = get,
              setinverse = setinverse,
@@ -19,7 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve give us inverse matrix
+## if Computer already calculate it before,
+## Previous data will be used.
 
 cacheSolve <- function(x, ...) {
 
